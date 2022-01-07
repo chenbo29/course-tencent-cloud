@@ -62,7 +62,7 @@ class Redis extends \Phalcon\Cache\Backend\Redis
      *
      * @throws Exception
      */
-    public function save($keyName = null, $content = null, $lifetime = null, bool $stopBuffer = true): bool
+    public function save($keyName = null, $content = null, $lifetime = null, $stopBuffer = true): bool
     {
         if ($keyName === null) {
             $lastKey = $this->_lastKey;
