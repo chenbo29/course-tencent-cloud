@@ -9,6 +9,7 @@ namespace App\Services;
 
 use Phalcon\Logger\Adapter\File as FileLogger;
 use Qcloud\Cos\Client as CosClient;
+use Qcloud\Cos\Exception\CosException;
 use TencentCloud\Common\Credential;
 use TencentCloud\Common\Exception\TencentCloudSDKException;
 use TencentCloud\Common\Profile\ClientProfile;
@@ -281,14 +282,17 @@ class Storage extends Service
     protected function getCosClient()
     {
         $secret = $this->getSettings('secret');
-
-        return new CosClient([
-            'region' => $this->settings['region'],
-            'schema' => $this->settings['protocol'],
-            'credentials' => [
-                'secretId' => $secret['secret_id'],
-                'secretKey' => $secret['secret_key'],
-            ]]);
+        try {
+            return new CosClient([
+                'region' => $this->settings['region'],
+                'schema' => $this->settings['protocol'],
+                'credentials' => [
+                    'secretId' => $secret['secret_id'],
+                    'secretKey' => $secret['secret_key'],
+                ]]);
+        } catch (CosException $e) {
+            $this->getLogger('storage')->error($e->getMessage());
+        }
     }
 
 }
