@@ -36,10 +36,10 @@ final class V20210403184518 extends AbstractMigration
 
         $user = [
             'id' => $account['id'],
-            'name' => '酷瓜云课堂',
+            'name' => '云课堂',
             'avatar' => '/img/default/user_avatar.png',
             'title' => '官方人员',
-            'about' => '酷瓜云课堂，开源在线教育解决方案',
+            'about' => '云课堂，在线教育解决方案',
             'admin_role' => 1,
             'edu_role' => 2,
             'create_time' => $now,
@@ -639,17 +639,17 @@ final class V20210403184518 extends AbstractMigration
             [
                 'section' => 'site',
                 'item_key' => 'title',
-                'item_value' => '酷瓜云课堂',
+                'item_value' => '云课堂',
             ],
             [
                 'section' => 'site',
                 'item_key' => 'keywords',
-                'item_value' => '开源网课系统，开源网校系统，开源知识付费系统，开源在线教育系统',
+                'item_value' => '网课系统，网校系统，知识付费系统，在线教育系统',
             ],
             [
                 'section' => 'site',
                 'item_key' => 'description',
-                'item_value' => '酷瓜云课堂，依托腾讯云基础服务，使用C扩展框架PHALCON开发',
+                'item_value' => '云课堂，依托腾讯云基础服务',
             ],
             [
                 'section' => 'site',
@@ -684,7 +684,7 @@ final class V20210403184518 extends AbstractMigration
             [
                 'section' => 'site',
                 'item_key' => 'copyright',
-                'item_value' => '深圳市酷瓜软件有限公司',
+                'item_value' => 'XXXXXX软件有限公司',
             ],
             [
                 'section' => 'site',
@@ -729,7 +729,7 @@ final class V20210403184518 extends AbstractMigration
             [
                 'section' => 'sms',
                 'item_key' => 'signature',
-                'item_value' => '酷瓜云课堂',
+                'item_value' => '云课堂',
             ],
             [
                 'section' => 'sms',

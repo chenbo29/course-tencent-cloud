@@ -10,11 +10,11 @@ namespace App\Library;
 class AppInfo
 {
 
-    protected $name = '酷瓜云课堂';
+    protected $name = '云课堂';
 
     protected $alias = 'CTC';
 
-    protected $link = 'https://koogua.com';
+    protected $link = 'http://kugua.chenbo.site';
 
     protected $version = '1.4.8';
 
